@@ -1,0 +1,89 @@
+CSC-123 LAB_12 Blake Fitzpatrick
+
+
+
+Challenge 1 (Convert to JSON):
+
+
+i) 
+
+{
+"int array" : [30,31,34,28,49]
+}
+
+ii)
+
+{
+"String array" : ["One","Two","Three","Four"]
+}
+
+iii)
+
+[ 
+31, 
+32, 
+"Hello World", 
+{ "String": ["One","Two","Three"] }
+]
+
+iv)
+
+[ 
+{"Name":"Name1"}, 
+{"Address":"213 Washington Blv"}, 
+{"Zip":"90532"}
+]
+
+v)
+
+[ 
+{"friends":["Friend 1", "Friend 2"]}, 
+{"map":[{"Name":"Name1"}, {"Address":"213 Washington Blv"}, {"Zip":"90532"}, {"Friends":"friends"} ]}
+]
+
+
+
+
+Challenge 2 (JSON to Java Code):
+
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.TreeMap;
+public class testing {
+
+	public static void main(String[] args) {
+		//JSON 1
+		ArrayList<String> JSONONE= new ArrayList<String>();
+		JSONONE.add("Apples");
+		JSONONE.add("Oranges");
+		JSONONE.add("Banana");
+		System.out.println(JSONONE);
+		
+		//JSON 2
+		Map<String,String> JSONTWO=new TreeMap<String,String>();
+		JSONTWO.put("Make", "Toyota");
+		JSONTWO.put("YearsOld", "3");
+		JSONTWO.put("Odometer", "12342");
+		JSONTWO.put("Price", "23122.00");
+		JSONTWO.put("Color", "Black");
+		System.out.println(JSONTWO);
+		
+		//JSON 3
+		ArrayList<Map> JSONTHREE= new ArrayList<Map>();
+		Map<String,String> map2=new TreeMap<String,String>();
+		map2.put("Make", "Toyota");
+		map2.put("YearsOld", "3");
+		map2.put("Odometer", "22342");
+		map2.put("Price", "13122.00");
+		map2.put("Color", "White");
+		Map<String,String> map3=new TreeMap<String,String>();
+		map3.put("Make", "Honda");
+		map3.put("YearsOld", "5");
+		map3.put("Odometer", "13342");
+		map3.put("Price", "24122.00");
+		map3.put("Color", "Black");
+		JSONTHREE.add(map2);
+		JSONTHREE.add(map3);
+		System.out.println(JSONTHREE);
+	}
+}
